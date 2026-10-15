@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sumittra Apila | วิทยาลัยการสาธารณสุขสิรินธร ขอนแก่น</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Prompt for elegant Thai typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        kku: {
+                            red: '#8A1538', // Maroon / Brick Red
+                            gold: '#D4AF37',
+                            gray: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for subtle animations and elegant scrollbar */
+        body { font-family: 'Prompt', sans-serif; background-color: #FAFAFA; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #8A1538; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b0f2a; }
+        
+        .fade-in { animation: fadeIn 1s ease-in forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(138,21,56,0.05) 0%, rgba(212,175,55,0.05) 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-kku-red selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-bold text-xl tracking-wider text-kku-red">SUMITTRA.A</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-kku-red transition-colors text-sm font-medium">เกี่ยวกับฉัน</a>
+                    <a href="#sop" class="text-gray-600 hover:text-kku-red transition-colors text-sm font-medium">เป้าหมายการศึกษา</a>
+                    <a href="#experience" class="text-gray-600 hover:text-kku-red transition-colors text-sm font-medium">ประสบการณ์</a>
+                    <a href="#activities" class="text-gray-600 hover:text-kku-red transition-colors text-sm font-medium">ผลงานกิจกรรม</a>
+                    <a href="#contact" class="text-gray-600 hover:text-kku-red transition-colors text-sm font-medium">ติดต่อ</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-kku-red focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#about" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-kku-red">เกี่ยวกับฉัน</a>
+            <a href="#sop" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-kku-red">เป้าหมายการศึกษา</a>
+            <a href="#experience" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-kku-red">ประสบการณ์</a>
+            <a href="#activities" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-kku-red">ผลงานกิจกรรม</a>
+            <a href="#contact" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-kku-red">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg pt-28 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div class="flex-1 text-center lg:text-left fade-in">
+                <p class="text-kku-gold font-semibold tracking-widest uppercase mb-2">Portfolio</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-gray-900">
+                    นางสาวสุมิตรา อภิลา <br>
+                    <span class="text-kku-red text-3xl md:text-4xl lg:text-5xl">(ปอ)</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    นักศึกษาปริญญาตรี<br>
+                    มีความมุ่งมั่นตั้งใจที่จะพัฒนาตนเองเพื่อเป็นบุคลากรด้านสาธารณสุขที่มีคุณภาพ<br>
+                    <span class="font-semibold text-kku-red mt-2 inline-block">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</span>
+                </p>
+                <blockquote class="italic text-gray-500 border-l-4 border-kku-gold pl-4 py-1 mb-8 max-w-lg mx-auto lg:mx-0">
+                    "I may walk slowly, but I never walk backward."<br>
+                    ฉันเป็นคนเดินช้า แต่ฉันไม่เคยเดินถอยหลัง
+                </blockquote>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#sop" class="px-8 py-3 bg-kku-red text-white rounded-full font-medium hover:bg-red-900 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">อ่านเป้าหมายของฉัน</a>
+                    <a href="#contact" class="px-8 py-3 bg-white border border-gray-200 text-gray-700 rounded-full font-medium hover:border-kku-red hover:text-kku-red transition-all shadow-sm">ช่องทางการติดต่อ</a>
+                </div>
+            </div>
+            <div class="flex-1 relative fade-in" style="animation-delay: 0.2s;">
+                <!-- Placeholder for Hero Image (Suggest replacing with a formal school uniform photo) -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full p-2 bg-gradient-to-tr from-kku-red to-kku-gold shadow-2xl">
+                    <img src="https://raw.githubusercontent.com/69202302104-oss/posumittra/main/IMG_4709.JPG" alt="Sumittra Apila" class="w-full h-full object-cover rounded-full border-4 border-white">
+                </div>
+                <!-- Decorative elements -->
+                <div class="absolute -top-4 -right-4 w-16 h-16 bg-kku-gold rounded-full opacity-20 animate-pulse"></div>
+                <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-kku-red rounded-full opacity-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 relative inline-block">
+                    ประวัติส่วนตัว
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-kku-red rounded"></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Info Card -->
+                <div class="md:col-span-5 bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-kku-red mb-6 flex items-center"><i class="fas fa-user-circle mr-3"></i> ข้อมูลพื้นฐาน</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="font-medium">ชื่อ-สกุล:</span>
+                            <span>นางสาว สุมิตรา อภิลา (ปอ)</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="font-medium">วันเกิด:</span>
+                            <span>๑๘ ตุลาคม พ.ศ. ๒๕๕๐</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="font-medium">ระดับปริญญาตรี:</span>
+                            <span class="text-right">วิทยาลัยการสาธารณสุขสิรินธร<br>จังหวัดขอนแก่น</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="font-medium">ระดับมัธยมศึกษา:</span>
+                            <span class="text-right">วิทย์-คณิต<br>(โรงเรียนภูเวียงวิทยาคม)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills & Roles Card -->
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-red-50 text-kku-red rounded-full flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">ความสามารถพิเศษ</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            การกล่าวสุนทรพจน์, เชียร์ลีดเดอร์, ใช้โปรแกรมตัดต่อคลิปวิดีโอ และออกแบบทำโปสเตอร์
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-yellow-50 text-kku-gold rounded-full flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">บทบาทความเป็นผู้นำ</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            <span class="font-medium block text-gray-800">ปี ๒๕๖๗:</span> รองประธานชมรม TO BE NUMBER ONE<br>
+                            <span class="font-medium block text-gray-800 mt-1">ปี ๒๕๖๘:</span> ที่ปรึกษาชมรม TO BE NUMBER ONE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sop" class="py-20 bg-kku-gray relative">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-5 pointer-events-none">
+            <i class="fas fa-quote-left absolute -top-10 -left-10 text-9xl text-kku-red"></i>
+            <i class="fas fa-quote-right absolute -bottom-10 -right-10 text-9xl text-kku-red"></i>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 relative inline-block">
+                    Statement of Purpose
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-kku-red rounded"></span>
+                </h2>
+            </div>
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-kku-red text-gray-700 leading-loose text-justify indent-8">
+                <p class="mb-4">
+                    หนูมีความสนใจในสายงานด้านสาธารณสุขและการดูแลสุขภาพ เนื่องจากเป็นสาขาวิชาที่ผสมผสานความรู้ทางวิทยาศาสตร์การแพทย์เข้ากับการดูแลส่งเสริมสุขภาพของประชาชนอย่างใกล้ชิด หนูเชื่อว่าการดูแลสุขภาพที่ดีตั้งแต่ต้นทาง ไม่เพียงช่วยลดอาการเจ็บป่วย แต่ยังช่วยเสริมสร้างคุณภาพชีวิตที่ดีให้กับทุกคนในสังคมอีกด้วย
+                </p>
+                <p class="mb-4">
+                    ตลอดระยะเวลาที่ผ่านมา หนูได้ศึกษาข้อมูลและเข้าร่วมกิจกรรมที่เกี่ยวข้องกับการแพทย์และสาธารณสุข พบว่าเป็นวิชาชีพที่ต้องอาศัยความรู้ ความอดทน ความละเอียดรอบคอบ และจิตใจที่พร้อมช่วยเหลือผู้อื่น ซึ่งสอดคล้องกับบุคลิกภาพของหนูที่เป็นคนใจเย็น มีความรับผิดชอบ และพร้อมเรียนรู้สิ่งใหม่อยู่เสมอ
+                </p>
+                <p>
+                    ปัจจุบันหนูกำลังศึกษาในระดับปริญญาตรี ณ วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น ซึ่งเป็นสถาบันหลักในการผลิตบุคลากรด้านสาธารณสุข หนูมีเป้าหมายที่จะพัฒนาตนเองให้มีความรู้ ความสามารถ และยึดมั่นในจรรยาบรรณวิชาชีพ เพื่อเติบโตเป็นบุคลากรทางการแพทย์และสาธารณสุขที่มีคุณภาพ และเป็นกำลังสำคัญในการดูแลสุขภาพของประชาชนต่อไป
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 relative inline-block">
+                    ประสบการณ์การทำงานและฝึกปฏิบัติ
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-kku-red rounded"></span>
+                </h2>
+            </div>
+
+            <!-- Internship Featured Card -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col md:flex-row">
+                <div class="md:w-2/5 relative h-64 md:h-auto">
+                    <!-- Placeholder for Hospital Photo -->
+                    <img src="https://placehold.co/600x800/eeeeee/8A1538?text=รูปฝึกงาน\nโรงพยาบาลเวียงเก่า" alt="Wiang Kao Hospital Internship" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+                    <div class="flex items-center space-x-3 mb-4 text-kku-red font-semibold text-sm">
+                        <i class="fas fa-hospital"></i>
+                        <span>กระทรวงสาธารณสุข | โรงพยาบาลเวียงเก่า</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">ฝึกประสบการณ์การทำงาน ณ โรงพยาบาลเวียงเก่า</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        เข้าฝึกประสบการณ์ในแผนกต่างๆ ของโรงพยาบาลเวียงเก่า จังหวัดขอนแก่น เป็นระยะเวลา ๔ วัน (ห้องฉุกเฉิน ๒ วัน, ห้องยา ๑ วัน, ห้องบัตร ๑ วัน)
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700 text-sm">เรียนรู้วิธีเปิดเซ็ตทำแผล ล้างแผลเบื้องต้น และจัดการกับอุปกรณ์ที่ใช้แล้ว</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700 text-sm">ทำความรู้จักเครื่องมือแพทย์เบื้องต้น การวัดความดัน และวิธีกายภาพบำบัดเบื้องต้น</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700 text-sm">เรียนรู้ระบบการนำข้อมูลเข้าสู่ระบบเพื่อทำการรักษา และการสื่อสารกับผู้ป่วย</span>
+                        </li>
+                    </ul>
+                    <div class="bg-red-50 border-l-4 border-kku-red p-4 rounded-r-lg">
+                        <p class="text-sm text-red-900 italic font-medium">
+                            "ทำให้ได้เรียนรู้การทำงานจริง ฝึกความรอบคอบ ความรับผิดชอบ การทำงานเป็นทีม เข้าใจระบบการทำงานของโรงพยาบาลมากขึ้น และตอกย้ำความมั่นใจในการอยากเป็นบุคลากรทางการแพทย์"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 relative inline-block">
+                    ผลงานวิชาการ และการพัฒนาตนเอง
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-kku-red rounded"></span>
+                </h2>
+            </div>
+
+            <!-- Grid Layout for Activities -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Activity Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปค่ายรังสีสัญจร" alt="ค่ายรังสีสัญจร" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-blue-600 bg-blue-50 uppercase last:mr-0 mr-1 mb-2">วิชาการ</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">ค่ายรังสีสัญจร ครั้งที่ ๑ มหาวิทยาลัยขอนแก่น</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            เรียนรู้พื้นฐานเกี่ยวกับสาขารังสีเทคนิค หลักการถ่ายภาพทางการแพทย์ (X-ray, CT scan, MRI) และความสำคัญของความปลอดภัยทางรังสี ผ่านการลงมือปฏิบัติจริง (Hands-on)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปแข่งขัน\nTO+BE+NUMBER+ONE" alt="TO BE NUMBER ONE" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-purple-600 bg-purple-50 uppercase last:mr-0 mr-1 mb-2">ผู้นำ/วิชาการ</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">ผู้นำเสนอประกวดชมรม TO BE NUMBER ONE</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            ได้รับรางวัลกล่าวสุนทรพจน์ "ดีเด่น" ระดับภาค 2 ปีซ้อน พัฒนาทักษะการสื่อสารเชิงวิชาการ การคิดวิเคราะห์ และความมั่นใจในการแสดงออก
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปค่ายดาราศาสตร์\nหรือ+ตอบปัญหาวิทย์" alt="แข่งขันวิทยาศาสตร์" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-green-600 bg-green-50 uppercase last:mr-0 mr-1 mb-2">วิชาการ</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">TOP 5 ตอบปัญหาวันวิทยาศาสตร์ & ค่ายดาราศาสตร์</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            แข่งขันทักษะด้านเคมี ชีววิทยา และฟิสิกส์ บูรณาการความรู้และฝึกการทำงานภายใต้เวลาที่จำกัด รวมถึงร่วมโครงการค่ายดาราศาสตร์สัญจร ณ หอดูดาวเฉลิมพระเกียรติฯ
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity Card 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปรับเสด็จ" alt="รับเสด็จทูลกระหม่อมหญิงอุบลรัตนฯ" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-50 uppercase last:mr-0 mr-1 mb-2">จิตอาสา</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">ปฏิบัติหน้าที่รับเสด็จ ทูลกระหม่อมหญิงอุบลรัตนราชกัญญาฯ</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            เรียนรู้ความหมายของการทำงานเพื่อส่วนรวมด้วยจิตอาสา แสดงถึงความเสียสละ ความอดทน และความรับผิดชอบต่อหน้าที่ที่ได้รับมอบหมาย ฝึกวินัยและการประสานงาน
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity Card 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปเชียร์ลีดเดอร์" alt="เชียร์ลีดเดอร์" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-pink-600 bg-pink-50 uppercase last:mr-0 mr-1 mb-2">กิจกรรม</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">ผู้นำเชียร์และเชียร์ลีดเดอร์ (รองชนะเลิศอันดับ ๒)</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            กิจกรรมกีฬาภายใน "ดอกกระโดนเกมส์" 2 ปีซ้อน ช่วยพัฒนาภาวะผู้นำ ความมั่นใจในการแสดงออก การควบคุมอารมณ์ และการทำงานเป็นหมู่คณะ
+                        </p>
+                    </div>
+                </div>
+
+                 <!-- Activity Card 6 -->
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/dddddd/555555?text=รูปจิตอาสาอื่นๆ" alt="จิตอาสาและสังคม" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-orange-600 bg-orange-50 uppercase last:mr-0 mr-1 mb-2">จิตอาสา/สังคม</span>
+                        <h3 class="font-bold text-lg mb-2 line-clamp-2">กิจกรรมเพื่อสังคมและการแบ่งปัน</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            อบรมแกนนำ YC, แสดงเจตจำนงบริจาคดวงตาในโครงการรักวัยใส, ผู้นำเสนอผลงาน ๑ อำเภอ ๑ โรงเรียนคุณภาพ, และกิจกรรมรับน้องส่งเสริมความสามัคคี
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12 border-t-4 border-kku-red">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <h2 class="text-2xl font-bold mb-2">ช่องทางการติดต่อ</h2>
+                    <p class="text-gray-400 text-sm">นางสาวสุมิตรา อภิลา (ปอ) | วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="tel:0935348316" class="flex items-center group">
+                        <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-kku-red transition-colors mr-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <span class="text-gray-300 group-hover:text-white transition-colors">093-534-8316</span>
+                    </a>
+                    <a href="mailto:4496puwing@gmail.com" class="flex items-center group">
+                        <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-kku-red transition-colors mr-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="text-gray-300 group-hover:text-white transition-colors">4496puwing@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
+                    &copy; 2024 Portfolio - Sumittra Apila. All rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/_OREZKXQ" target="_blank" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gradient-to-tr hover:from-yellow-400 hover:to-purple-600 hover:text-white transition-all">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="fab fa-facebook-f"></i>
+                        <!-- Note: The PDF mentioned "OREZKXQ MUMUU" for FB, user can add direct link here -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            // Toggle Mobile Menu
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close Mobile Menu on link click
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
